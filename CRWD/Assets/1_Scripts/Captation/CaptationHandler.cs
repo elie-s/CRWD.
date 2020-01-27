@@ -14,8 +14,7 @@ namespace CRWD.Captation
 
         private void Awake()
         {
-            data.SetWebcam(settings.webcamIndex);
-            data.texture = new Texture2D((int)settings.rectangle.width, (int)settings.rectangle.height);
+            data.Init(settings);
         }
 
         // Start is called before the first frame update
@@ -33,6 +32,7 @@ namespace CRWD.Captation
         private IEnumerator UpdateTextureRoutine()
         {
             UpdateTexture();
+            data.OnCaptationUpdateCall();
 
             yield return new WaitForSeconds((1.0f / settings.rate));
 
@@ -54,8 +54,6 @@ namespace CRWD.Captation
             data.texture = new Texture2D((int)tmpRect.width, (int)tmpRect.height);
             data.texture.SetPixels(data.webcam.GetPixels((int)tmpRect.x, (int)tmpRect.y, (int)tmpRect.width, (int)tmpRect.height));
             data.texture.Apply();
-
-            Debug.Log("blhe");
         }
 
         private void ApplyModifications()
