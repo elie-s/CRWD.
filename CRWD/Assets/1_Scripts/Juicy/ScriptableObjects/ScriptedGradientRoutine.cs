@@ -1,0 +1,30 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace CRWD
+{
+    [CreateAssetMenu(menuName = "CRWD/Scripted Behaviours/Gradient Routine")]
+    public class ScriptedGradientRoutine : ScriptedBehaviourRoutine
+    {
+        [SerializeField] private float duration;
+        [SerializeField] private Gradient gradient;
+
+        public override IEnumerator Play(Component _component)
+        {
+            SpriteRenderer sRenderer = _component as SpriteRenderer;
+            float timer = 0.0f;
+
+            while (timer < duration)
+            {
+                sRenderer.color = gradient.Evaluate(timer / duration);
+                Debug.Log("hbefkb");
+                yield return null;
+                timer += Time.deltaTime;
+            }
+
+            sRenderer.color = gradient.Evaluate(1.0f);
+        }
+
+    }
+}

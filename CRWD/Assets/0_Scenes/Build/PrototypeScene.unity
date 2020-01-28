@@ -152,14 +152,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcda7da87aab874e9594aa81cd951b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sRenderer: {fileID: 1252132358}
   animations:
-  - {fileID: 11400000, guid: 1b1bb7e9f5fc60c4f8db7cd49bf52bf4, type: 2}
+  - {fileID: 11400000, guid: 2574bb5b40742e742a8eb284dbaddb2a, type: 2}
   onAllAnimationsEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 373421343}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 373421344}
+        m_MethodName: DestroyObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -207,6 +208,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7c07732825be6478e8e42fed1aaae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sRenderer: {fileID: 1252132358}
+  animations:
+  - {fileID: 11400000, guid: 2ed98ed293874464dbc9aa44a318106c, type: 2}
+  - {fileID: 11400000, guid: 1b1bb7e9f5fc60c4f8db7cd49bf52bf4, type: 2}
+  - {fileID: 11400000, guid: 316d38e5f99d5434f80f7a4b90edee51, type: 2}
+  onAllAnimationsEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 373421345}
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &373421347
 Transform:
   m_ObjectHideFlags: 0
@@ -216,7 +236,7 @@ Transform:
   m_GameObject: {fileID: 373421343}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1252132357}
   m_Father: {fileID: 0}

@@ -9,7 +9,7 @@ namespace CRWD
     {
         [SerializeField] private string playerTag = "Player";
         [SerializeField] private UnityEvent onCollected = default;
-        private bool collected = false;
+        private bool collected = true;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -26,6 +26,11 @@ namespace CRWD
         {
             onCollected.Invoke();
             collected = true;
+        }
+
+        public void Activate()
+        {
+            collected = false;
         }
     }
 }

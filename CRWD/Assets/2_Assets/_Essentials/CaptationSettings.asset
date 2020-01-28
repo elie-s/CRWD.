@@ -16,7 +16,7 @@ MonoBehaviour:
   rectangle:
     serializedVersion: 2
     x: 0
-    y: 52.22
+    y: -7.28
     width: 200
     height: 200
   textureSize: 16

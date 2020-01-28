@@ -10,30 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2de20a8628776de478217278f144c16a, type: 3}
-  m_Name: Scale1
+  m_Name: Pop
   m_EditorClassIdentifier: 
   duration: 1
-  endScale: 5
+  endScale: 1
   scaleCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.005200606
+      outSlope: 0.005200606
       tangentMode: 0
-      weightedMode: 0
+      weightedMode: 3
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.5643534
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0.016504584
+      outSlope: 0.016504584
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.08192098
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

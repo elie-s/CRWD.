@@ -6,6 +6,7 @@ namespace CRWD
 {
     public class DestroyBehaviour : MonoBehaviour
     {
+        [SerializeField] private SpriteRenderer sRenderer = default;
         [SerializeField] private ScriptedBehaviourRoutine[] animations;
         [SerializeField] private UnityEvent onAllAnimationsEnd = default;
 
@@ -26,7 +27,9 @@ namespace CRWD
         {
             for (int i = 0; i < animations.Length; i++)
             {
-                StartCoroutine(PlayAnimation(animations[i].Play(transform), i));
+                if (animations[i] is ScriptedGradientRoutine) StartCoroutine(PlayAnimation(animations[i].Play(sRenderer), i));
+                else if (animations[i] is ScriptedMovementRoutine) StartCoroutine(PlayAnimation(animations[i].Play(transform), i));
+                else if (animations[i] is ScriptedScaleRoutine) StartCoroutine(PlayAnimation(animations[i].Play(transform), i));
             }
         }
 
