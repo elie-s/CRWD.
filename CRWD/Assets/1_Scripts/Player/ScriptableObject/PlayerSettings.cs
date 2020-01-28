@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace CRWD
 {
+    [CreateAssetMenu(menuName = "CRWD/Player/Settings")]
     public class PlayerSettings : ScriptableObject
     {
         [Header("Movement")]

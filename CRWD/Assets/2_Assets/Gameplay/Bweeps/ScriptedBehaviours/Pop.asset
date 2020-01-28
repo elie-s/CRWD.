@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pop
   m_EditorClassIdentifier: 
   duration: 1
-  endScale: 1
+  endScale: 0.2
   scaleCurve:
     serializedVersion: 2
     m_Curve:
