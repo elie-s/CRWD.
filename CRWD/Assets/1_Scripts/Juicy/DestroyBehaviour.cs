@@ -7,7 +7,7 @@ namespace CRWD
     public class DestroyBehaviour : MonoBehaviour
     {
         [SerializeField] private SpriteRenderer sRenderer = default;
-        [SerializeField] private ScriptedBehaviourRoutine[] animations;
+        [SerializeField] private ScriptedBehaviourRoutine[] animations = default;
         [SerializeField] private UnityEvent onAllAnimationsEnd = default;
 
         private bool[] finished;

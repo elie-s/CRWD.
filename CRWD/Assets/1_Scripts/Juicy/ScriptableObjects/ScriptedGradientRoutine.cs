@@ -7,8 +7,8 @@ namespace CRWD
     [CreateAssetMenu(menuName = "CRWD/Scripted Behaviours/Gradient Routine")]
     public class ScriptedGradientRoutine : ScriptedBehaviourRoutine
     {
-        [SerializeField] private float duration;
-        [SerializeField] private Gradient gradient;
+        [SerializeField] private float duration = 0.0f;
+        [SerializeField] private Gradient gradient = default;
 
         public override IEnumerator Play(Component _component)
         {

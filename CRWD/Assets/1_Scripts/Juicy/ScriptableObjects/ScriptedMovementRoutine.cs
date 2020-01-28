@@ -12,9 +12,9 @@ namespace CRWD
         [SerializeField] private AnimationCurve movementCurve = default;
         [SerializeField] private Direction direction = default;
         [SerializeField] private Mode mode = default;
-        [SerializeField, HideInInspector] private string nameToFind;
-        [SerializeField, HideInInspector] private Rect randomInside;
-        [SerializeField, HideInInspector] private Vector2 position;
+        [SerializeField, HideInInspector] private string nameToFind = "";
+        [SerializeField, HideInInspector] private Rect randomInside = default;
+        [SerializeField, HideInInspector] private Vector2 position = default;
 
         public override IEnumerator Play(Component _component)
         {

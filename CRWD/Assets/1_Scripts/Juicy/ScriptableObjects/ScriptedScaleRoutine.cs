@@ -7,9 +7,9 @@ namespace CRWD
     [CreateAssetMenu(menuName = "CRWD/Scripted Behaviours/Scale Routine")]
     public class ScriptedScaleRoutine : ScriptedBehaviourRoutine
     {
-        [SerializeField] private float duration;
-        [SerializeField] private float endScale;
-        [SerializeField] private AnimationCurve scaleCurve;
+        [SerializeField] private float duration = 0.0f;
+        [SerializeField] private float endScale = 1.0f;
+        [SerializeField] private AnimationCurve scaleCurve = default;
 
         public override IEnumerator Play(Component _component)
         {

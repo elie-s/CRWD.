@@ -7,9 +7,15 @@ namespace CRWD
     public class MovementBehaviour : MonoBehaviour, IRepulsable
     {
         [SerializeField] private bool repulsable = false;
+        [SerializeField] private bool playOnAwake = false;
         [SerializeField, DrawScriptable] private MovementSettings settings = default;
 
         private IEnumerator routine;
+
+        private void Awake()
+        {
+            if (playOnAwake) StartRoutine();
+        }
 
         public void StartRoutine()
         {
