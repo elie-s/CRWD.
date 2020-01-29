@@ -9,18 +9,8 @@ namespace CRWD
     {
         [SerializeField] private EventsLinker eventsLinker = default;
         [SerializeField] private ScoreData score = default;
+        [SerializeField] private PhaseManager phases = default;
 
 
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 }

@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 685f2120947922744937bae9811f92e8, type: 3}
-  m_Name: Score
+  m_Script: {fileID: 11500000, guid: 8a2015f6d89d80d4ba19d527a5f2d004, type: 3}
+  m_Name: EventLinker
   m_EditorClassIdentifier: 
-  eventsLinker: {fileID: 11400000, guid: 75ac74c5bf8db564e8696adabad4a453, type: 2}

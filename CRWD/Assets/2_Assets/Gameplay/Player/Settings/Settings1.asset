@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8002997af9f0c24b9a15373f02fd4c0, type: 3}
   m_Name: Settings1
   m_EditorClassIdentifier: 
-  clampedArea: {fileID: 0}
+  clampedArea: {fileID: 11400000, guid: c81b95a5af5a948458a61c740adb43a1, type: 2}
   ratioSizeSpeedCurve:
     serializedVersion: 2
     m_Curve:

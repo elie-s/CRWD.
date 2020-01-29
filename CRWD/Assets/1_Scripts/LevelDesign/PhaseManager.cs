@@ -6,16 +6,21 @@ namespace CRWD
 {
     public class PhaseManager : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
+        [SerializeField] private ScoreData score = default;
+        [SerializeField] private GameObject[] phases = default;
 
+        public GameObject SetPhase(Transform _parent)
+        {
+            index++;
+            GameObject phase = Instantiate(phases[index], _parent);
+            score.AddPhaseBweepsLimit(phase.GetComponentsInChildren<CollectableBehaviour>().Length);
+
+            return phase;
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
-
+            
         }
     }
 }

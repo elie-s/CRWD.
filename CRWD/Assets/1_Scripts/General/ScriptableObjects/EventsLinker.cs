@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 namespace CRWD
 {
-    [CreateAssetMenu(menuName = "CRWD/LD/Phase Settings")]
+    //[CreateAssetMenu(menuName = "CRWD/EventLinker")]
     public class EventsLinker : ScriptableObject
     {
         public UnityEvent onLevelStart { get; private set; }
