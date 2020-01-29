@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CircleMovementRoutineCCW
   m_EditorClassIdentifier: 
   radius: 1
-  speed: 5
+  speed: 50
   clockwise: 0

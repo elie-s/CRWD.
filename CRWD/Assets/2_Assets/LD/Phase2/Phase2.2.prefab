@@ -171,6 +171,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5522247184731156367, guid: 9a6cc1452a6371b429fe5378e5000d70,
+        type: 3}
+      propertyPath: onAllAnimationsEnd.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StartRoutine
+      objectReference: {fileID: 0}
     - target: {fileID: 5522247184731156402, guid: 9a6cc1452a6371b429fe5378e5000d70,
         type: 3}
       propertyPath: m_Name
@@ -245,6 +250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522247184731156367, guid: 9a6cc1452a6371b429fe5378e5000d70,
+        type: 3}
+      propertyPath: onAllAnimationsEnd.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StartRoutine
       objectReference: {fileID: 0}
     - target: {fileID: 5522247184731156402, guid: 9a6cc1452a6371b429fe5378e5000d70,
         type: 3}

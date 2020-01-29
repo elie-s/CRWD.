@@ -12,10 +12,11 @@ namespace CRWD
         [SerializeField] private float delay = 0.0f;
         [SerializeField] private Vector2 direction = default;
         [SerializeField] private float range = 1.0f;
+
         public override IEnumerator MovementRoutine(Transform _transform, Vector2 _origin)
         {
-            Vector2 startPos = _origin - direction.normalized * range  / 2.0f;
-            Vector2 endPos = _origin + direction.normalized * range  / 2.0f;
+            Vector2 startPos = _origin;
+            Vector2 endPos = _origin + direction.normalized * range;
             float timer = 0.0f;
 
             while (timer < duration)

@@ -30,7 +30,8 @@ namespace CRWD
         private IEnumerator LoopRoutine()
         {
             yield return StartCoroutine(routine);
-
+            routine = settings.MovementRoutine(transform, transform.position);
+            loop = LoopRoutine();
             StartCoroutine(loop);
         }
 

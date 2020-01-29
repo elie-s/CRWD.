@@ -94,6 +94,8 @@ GameObject:
   - component: {fileID: 5522247184731156364}
   - component: {fileID: 5522247184731156365}
   - component: {fileID: 5522247184731156361}
+  - component: {fileID: -1656159171289103291}
+  - component: {fileID: 1960160803675572091}
   m_Layer: 8
   m_Name: BaseBweep
   m_TagString: Untagged
@@ -148,6 +150,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -1656159171289103291}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &5522247184731156364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +180,17 @@ MonoBehaviour:
       - m_Target: {fileID: 5522247184731156365}
         m_MethodName: StartDestroy
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -1656159171289103291}
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -227,9 +251,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f8c778d6f03a040ab7ee3f7bdb3a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repulsable: 0
   playOnAwake: 0
+  repulse: {fileID: 0}
   settings: {fileID: 0}
+--- !u!58 &-1656159171289103291
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5522247184731156402}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!50 &1960160803675572091
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5522247184731156402}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &5522247184090064393
 PrefabInstance:
   m_ObjectHideFlags: 0
