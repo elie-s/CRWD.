@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d883adf4d6ce50041a966d016e0cefcd, type: 3}
-  m_Name: Test
+  m_Name: RandomApparition
   m_EditorClassIdentifier: 
   duration: 1
   movementCurve:
@@ -19,20 +19,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0.0025056265
-      outSlope: 0.0025056265
+      inSlope: 0.22721232
+      outSlope: 0.22721232
       tangentMode: 0
       weightedMode: 3
       inWeight: 0
-      outWeight: 0.7076271
+      outWeight: 0.59166664
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0.30566034
+      outSlope: 0.30566034
       tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
+      weightedMode: 3
+      inWeight: 0.625
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
