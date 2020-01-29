@@ -10,13 +10,9 @@ namespace CRWD
     {
         [SerializeField] private ScoreData score = default;
         [SerializeField] private TextMeshProUGUI displayBweeps = default;
-        [SerializeField] private UnityEvent onBweepCollected = default;
-        [SerializeField] private UnityEvent onPhaseCompleted = default;
-        [SerializeField] private UnityEvent onDataChanged = default;
 
         private void Awake()
         {
-            score.LinkEvents(onBweepCollected, onPhaseCompleted, onDataChanged);
             score.ResetData();
             score.SetPhaseBweepsLimit(2);
         }

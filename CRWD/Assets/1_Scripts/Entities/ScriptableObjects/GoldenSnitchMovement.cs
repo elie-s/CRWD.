@@ -7,7 +7,7 @@ namespace CRWD
     [CreateAssetMenu(menuName = "CRWD/Movements/Golden Snitch")]
     public class GoldenSnitchMovement : MovementSettings
     {
-        [SerializeField] private Rect area = default;
+        [SerializeField] private RectObject area = default;
         [SerializeField] private AnimationCurve celerityCurve = default;
         [SerializeField] private float durationRef = 1.0f;
         [SerializeField] private float maxDistance = 1.5f;
@@ -120,15 +120,15 @@ namespace CRWD
         {
             Gizmos.color = new Color(1.0f, 0.8840241f, 0.168f, 1.0f);
 
-            Gizmos.DrawLine(new Vector3(area.x, area.y), new Vector3(area.x, area.y + area.height));
-            Gizmos.DrawLine(new Vector3(area.x + area.width, area.y + area.height), new Vector3(area.x, area.y + area.height));
-            Gizmos.DrawLine(new Vector3(area.x + area.width, area.y + area.height), new Vector3(area.x + area.width, area.y));
-            Gizmos.DrawLine(new Vector3(area.x, area.y), new Vector3(area.x + area.width, area.y));
+            Gizmos.DrawLine(new Vector3(area.rect.x, area.rect.y), new Vector3(area.rect.x, area.rect.y + area.rect.height));
+            Gizmos.DrawLine(new Vector3(area.rect.x + area.rect.width, area.rect.y + area.rect.height), new Vector3(area.rect.x, area.rect.y + area.rect.height));
+            Gizmos.DrawLine(new Vector3(area.rect.x + area.rect.width, area.rect.y + area.rect.height), new Vector3(area.rect.x + area.rect.width, area.rect.y));
+            Gizmos.DrawLine(new Vector3(area.rect.x, area.rect.y), new Vector3(area.rect.x + area.rect.width, area.rect.y));
         }
 
         private bool CheckBoundaries(Vector2 _pos)
         {
-            bool result = _pos.x < area.x || _pos.x > area.x + area.width || _pos.y < area.y || _pos.y > area.y + area.height;
+            bool result = _pos.x < area.rect.x || _pos.x > area.rect.x + area.rect.width || _pos.y < area.rect.y || _pos.y > area.rect.y + area.rect.height;
             return result;
         }
     }

@@ -8,39 +8,29 @@ namespace CRWD
     [CreateAssetMenu(menuName = "CRWD/Score/Data")]
     public class ScoreData : ScriptableObject
     {
+        [SerializeField] private EventsLinker eventsLinker = default;
         public int bweepsCount { get; private set; }
         public int phaseBweepsLimit { get; private set; }
-
-        private UnityEvent onBweepCollected = default;
-        private UnityEvent onPhaseCompleted = default;
-        private UnityEvent onDataChanged = default;
-
-        public void LinkEvents(UnityEvent _onBweepCollected, UnityEvent _onPhaseCompleted, UnityEvent _onDataChanged)
-        {
-            onBweepCollected = _onBweepCollected;
-            onPhaseCompleted = _onPhaseCompleted;
-            onDataChanged = _onDataChanged;
-        }
 
         public void CollectBweep()
         {
             bweepsCount++;
-            onBweepCollected.Invoke();
-            onDataChanged.Invoke();
-            if (bweepsCount == phaseBweepsLimit) onPhaseCompleted.Invoke();
+            eventsLinker.onBweepCollected.Invoke();
+            eventsLinker.onScoreDataChanged.Invoke();
+            if (bweepsCount == phaseBweepsLimit) eventsLinker.onPhaseEnd.Invoke();
         }
 
         public void SetPhaseBweepsLimit(int _limit)
         {
             phaseBweepsLimit = _limit;
-            onDataChanged.Invoke();
+            eventsLinker.onScoreDataChanged.Invoke();
         }
 
         public void ResetData()
         {
             bweepsCount = 0;
             phaseBweepsLimit = 0;
-            onDataChanged.Invoke();
+            eventsLinker.onScoreDataChanged.Invoke();
         }
     }
 }

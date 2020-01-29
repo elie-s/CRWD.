@@ -18,7 +18,6 @@ namespace CRWD
             while (timer < duration)
             {
                 sRenderer.color = gradient.Evaluate(timer / duration);
-                //Debug.Log("hbefkb");
                 yield return null;
                 timer += Time.deltaTime;
             }

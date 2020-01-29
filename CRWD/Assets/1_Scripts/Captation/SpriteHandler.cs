@@ -9,7 +9,7 @@ namespace CRWD.Captation
         [SerializeField] private SpriteRenderer sRenderer = default;
         [SerializeField] private CaptationData data = default;
 
-        private void OnEnable()
+        private void Start()
         {
             data.OnCaptationUpdateRegister(OnCaptationUpdate);
         }
@@ -17,11 +17,6 @@ namespace CRWD.Captation
         private void OnDisable()
         {
             data.OnCaptationUpdateUnregister(OnCaptationUpdate);
-        }
-
-        void Start()
-        {
-
         }
 
         void OnCaptationUpdate()
