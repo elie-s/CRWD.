@@ -6,21 +6,26 @@ namespace CRWD
 {
     public class PhaseManager : MonoBehaviour
     {
+        [SerializeField] private EventsLinker eventsLinker = default;
         [SerializeField] private ScoreData score = default;
         [SerializeField] private GameObject[] phases = default;
+        [SerializeField, DrawScriptable] private PhaseSettings settings;
 
-        public GameObject SetPhase(Transform _parent)
+        public IEnumerator SetPhase(Transform _parent)
         {
-            index++;
-            GameObject phase = Instantiate(phases[index], _parent);
-            score.AddPhaseBweepsLimit(phase.GetComponentsInChildren<CollectableBehaviour>().Length);
+            eventsLinker.onPhaseTransitionStart.Invoke();
 
-            return phase;
+            yield return new WaitForSeconds(settings.delay);
+
+            eventsLinker.onPhaseTransitionEnd.Invoke();
+
+            GameObject phase = Instantiate(phases[score.currentLevelPhaseCount], _parent);
+            score.AddPhaseBweepsLimit(phase.GetComponentsInChildren<CollectableBehaviour>().Length);
         }
 
-        private void Update()
+        public void SetPhasesLimit()
         {
-            
+            score.SetCurrentLevelPhaseMax(phases.Length);
         }
     }
 }

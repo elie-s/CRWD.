@@ -12,7 +12,9 @@ namespace CRWD
         public int bweepsCount { get; private set; }
         public int phaseBweepsLimit { get; private set; }
         public int currentLevelPhaseCount { get; private set; }
-        public int currentLevelPhaseLimit { get; private set; }
+        public int currentLevelPhaseMax { get; private set; }
+        public int currentWorldLevelCount { get; private set; }
+        public int currentWorldLevelMax { get; private set; }
 
         public void CollectBweep()
         {
@@ -23,7 +25,7 @@ namespace CRWD
             {
                 eventsLinker.onPhaseEnd.Invoke();
 
-                if(currentLevelPhaseCount == currentLevelPhaseLimit)
+                if(currentLevelPhaseCount == currentLevelPhaseMax)
                 {
                     eventsLinker.onLevelEnd.Invoke();
                 }
@@ -42,9 +44,15 @@ namespace CRWD
             eventsLinker.onScoreDataChanged.Invoke();
         }
 
-        public void SetCurrentLevelPhaseLimit(int _limit)
+        public void SetCurrentLevelPhaseMax(int _limit)
         {
-            currentLevelPhaseLimit = _limit;
+            currentLevelPhaseMax = _limit;
+            eventsLinker.onScoreDataChanged.Invoke();
+        }
+
+        public void SetCurrentWorldMax(int _limit)
+        {
+            currentWorldLevelMax = _limit;
             eventsLinker.onScoreDataChanged.Invoke();
         }
 
@@ -53,7 +61,7 @@ namespace CRWD
             bweepsCount = 0;
             phaseBweepsLimit = 0;
             currentLevelPhaseCount = 0;
-            currentLevelPhaseLimit = 0;
+            currentLevelPhaseMax = 0;
             eventsLinker.onScoreDataChanged.Invoke();
         }
     }
