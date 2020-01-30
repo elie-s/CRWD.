@@ -135,7 +135,7 @@ MonoBehaviour:
   animations:
   - {fileID: 11400000, guid: 2ed98ed293874464dbc9aa44a318106c, type: 2}
   - {fileID: 11400000, guid: 1b1bb7e9f5fc60c4f8db7cd49bf52bf4, type: 2}
-  - {fileID: 11400000, guid: 80c38960ff9c7214a876381fe0d9b2a3, type: 2}
+  - {fileID: 11400000, guid: e98bca8e9eefa4640aca55673658f01b, type: 2}
   onAllAnimationsEnd:
     m_PersistentCalls:
       m_Calls:
