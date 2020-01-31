@@ -12,12 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3778937969b13cb4394d707c1e2367c4, type: 3}
   m_Name: GoldenSnitchMovementRoutine
   m_EditorClassIdentifier: 
-  area:
-    serializedVersion: 2
-    x: -8.5
-    y: -4.5
-    width: 17
-    height: 9
+  area: {fileID: 11400000, guid: c81b95a5af5a948458a61c740adb43a1, type: 2}
   celerityCurve:
     serializedVersion: 2
     m_Curve:

@@ -2,17 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelSettings : MonoBehaviour
+namespace CRWD
 {
-    // Start is called before the first frame update
-    void Start()
+    [CreateAssetMenu(menuName = "CRWD/LD/Level Settings")]
+    public class LevelSettings : ScriptableObject
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public float delay = 1.5f;
     }
 }

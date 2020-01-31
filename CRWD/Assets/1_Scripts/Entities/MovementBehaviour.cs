@@ -13,9 +13,11 @@ namespace CRWD
         private IEnumerator loop;
         private IEnumerator routine;
         private IEnumerator repulsion;
+        private Vector2 origin;
 
         private void Awake()
         {
+            origin = transform.position;
             if (playOnAwake) StartRoutine();
         }
 
@@ -49,6 +51,15 @@ namespace CRWD
             StopCoroutine(repulsion);
             repulsion = repulse.RepulsionRoutine(transform, _direction, _force);
             StartCoroutine(repulsion);
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            if (settings)
+            {
+                if (Application.isPlaying) settings.DrawGizmos(origin);
+                else if (Application.isEditor) settings.DrawGizmos(transform);
+            }
         }
     }
 }

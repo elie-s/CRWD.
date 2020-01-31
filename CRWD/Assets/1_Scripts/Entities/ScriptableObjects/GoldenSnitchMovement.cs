@@ -116,9 +116,19 @@ namespace CRWD
             return result;
         }
 
-        private void OnDrawGizmosSelected()
+        public override void DrawGizmos(Transform _transform)
         {
-            Gizmos.color = new Color(1.0f, 0.8840241f, 0.168f, 1.0f);
+            Gizmos.color = Color.blue;
+
+            Gizmos.DrawLine(new Vector3(area.rect.x, area.rect.y), new Vector3(area.rect.x, area.rect.y + area.rect.height));
+            Gizmos.DrawLine(new Vector3(area.rect.x + area.rect.width, area.rect.y + area.rect.height), new Vector3(area.rect.x, area.rect.y + area.rect.height));
+            Gizmos.DrawLine(new Vector3(area.rect.x + area.rect.width, area.rect.y + area.rect.height), new Vector3(area.rect.x + area.rect.width, area.rect.y));
+            Gizmos.DrawLine(new Vector3(area.rect.x, area.rect.y), new Vector3(area.rect.x + area.rect.width, area.rect.y));
+        }
+
+        public override void DrawGizmos(Vector2 _origin)
+        {
+            Gizmos.color = Color.blue;
 
             Gizmos.DrawLine(new Vector3(area.rect.x, area.rect.y), new Vector3(area.rect.x, area.rect.y + area.rect.height));
             Gizmos.DrawLine(new Vector3(area.rect.x + area.rect.width, area.rect.y + area.rect.height), new Vector3(area.rect.x, area.rect.y + area.rect.height));

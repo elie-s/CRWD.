@@ -14,7 +14,7 @@ namespace CRWD.World
         public AnimationCurve lerpDistribution = default;
         public Gradient depthGradient = default;
         public float maxSize = 10.0f;
-        public Rect centerRect = new Rect(-4.0f, -2.0f, 8.0f, 4.0f);
-        public Rect largeRect = new Rect(-6.5f, -3.5f, 13.0f, 7.0f);
+        public RectObject centerRect = default;
+        public RectObject largeRect = default;
     }
 }

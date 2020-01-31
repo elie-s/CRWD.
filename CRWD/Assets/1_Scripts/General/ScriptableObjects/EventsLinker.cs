@@ -17,6 +17,8 @@ namespace CRWD
         public UnityEvent onBweepCollected { get; private set; }
         public UnityEvent onRepulsorContact { get; private set; }
         public UnityEvent onScoreDataChanged { get; private set; }
+        public UnityEvent onLevelTransitionStart { get; private set; }
+        public UnityEvent onLevelTransitionEnd { get; private set; }
 
         public void Link(params UnityEvent[] _events)
         {
@@ -29,6 +31,8 @@ namespace CRWD
             onBweepCollected = _events[6];
             onRepulsorContact = _events[7];
             onScoreDataChanged = _events[8];
+            onLevelTransitionStart = _events[9];
+            onLevelTransitionEnd = _events[10];
         }
     }
 }

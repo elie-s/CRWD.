@@ -43,5 +43,19 @@ namespace CRWD
 
             _transform.position = startPos;
         }
+
+        public override void DrawGizmos(Transform _transform)
+        {
+            Gizmos.color = Color.blue;
+
+            Gizmos.DrawLine(_transform.position, _transform.position + (Vector3)direction * range);
+        }
+
+        public override void DrawGizmos(Vector2 _origin)
+        {
+            Gizmos.color = Color.blue;
+
+            Gizmos.DrawLine(_origin, _origin + direction * range);
+        }
     }
 }

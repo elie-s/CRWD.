@@ -9,7 +9,7 @@ namespace CRWD
     {
         [SerializeField] private string playerTag = "Player";
         [SerializeField] private UnityEvent onCollected = default;
-        private bool collected = true;
+        [SerializeField] private bool collected = true;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {

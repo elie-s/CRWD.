@@ -12,25 +12,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbda68dec05f4fa46bf0ba09d2f4f4ff, type: 3}
   m_Name: BackgroundParallaxSettings
   m_EditorClassIdentifier: 
-  elementPrefab: {fileID: 0}
-  sizeFactor: 0.25
-  amount: 100
+  elementPrefab: {fileID: 1786768985617441017, guid: 37d7c7571b5c67642af9b0d90d0b737f,
+    type: 3}
+  sizeFactor: 0.2
+  amount: 300
   sizeDistribution:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.056964055
+      outSlope: 0.056964055
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0
+      outWeight: 0.84039545
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 359.00064
+      outSlope: 359.00064
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.0014125109
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   lerpDistribution:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: -1.9564888
+      outSlope: -1.9564888
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0
+      outWeight: 0.15677965
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.039666213
+      outSlope: -0.039666213
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.3799435
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   depthGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0.2967245, g: 0.056275345, b: 0.706, a: 0.29411766}
+    key1: {r: 0.59069467, g: 0.4012235, b: 0.9098039, a: 0.19607843}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -56,16 +93,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  maxSize: 10
-  centerRect:
-    serializedVersion: 2
-    x: -4
-    y: -2
-    width: 8
-    height: 4
-  largeRect:
-    serializedVersion: 2
-    x: -6.5
-    y: -3.5
-    width: 13
-    height: 7
+  maxSize: 7
+  centerRect: {fileID: 11400000, guid: 8d0f3302f15c8884f930d6c6f57d98e1, type: 2}
+  largeRect: {fileID: 11400000, guid: 3ca35b51e4bb5054f811f0a14cf4efa3, type: 2}

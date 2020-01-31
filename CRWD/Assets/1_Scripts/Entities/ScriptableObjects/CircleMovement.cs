@@ -39,5 +39,19 @@ namespace CRWD
                 if (_angle < -180) _angle = _angle+360;
             }
         }
+
+        public override void DrawGizmos(Transform _transform)
+        {
+            Gizmos.color = Color.blue;
+
+            Gizmos.DrawWireSphere(_transform.position, radius);
+        }
+
+        public override void DrawGizmos(Vector2 _origin)
+        {
+            Gizmos.color = Color.blue;
+
+            Gizmos.DrawWireSphere(_origin, radius);
+        }
     }
 }

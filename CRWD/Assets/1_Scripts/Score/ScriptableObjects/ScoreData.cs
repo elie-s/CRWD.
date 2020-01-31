@@ -25,9 +25,14 @@ namespace CRWD
             {
                 eventsLinker.onPhaseEnd.Invoke();
 
-                if(currentLevelPhaseCount == currentLevelPhaseMax)
+                if(currentLevelPhaseCount == currentLevelPhaseMax-1)
                 {
                     eventsLinker.onLevelEnd.Invoke();
+
+                    if(currentWorldLevelCount == currentWorldLevelMax-1)
+                    {
+                        //
+                    }
                 }
             }
         }
@@ -44,9 +49,33 @@ namespace CRWD
             eventsLinker.onScoreDataChanged.Invoke();
         }
 
+        public void IncreaseCurrentLevelPhaseCount()
+        {
+            currentLevelPhaseCount++;
+            eventsLinker.onScoreDataChanged.Invoke();
+        }
+
+        public void ResetCurrentLevelPhaseCount()
+        {
+            currentLevelPhaseCount = 0;
+            eventsLinker.onScoreDataChanged.Invoke();
+        }
+
         public void SetCurrentLevelPhaseMax(int _limit)
         {
             currentLevelPhaseMax = _limit;
+            eventsLinker.onScoreDataChanged.Invoke();
+        }
+
+        public void IncreaseCurrentWorldLevelCount()
+        {
+            currentWorldLevelCount++;
+            eventsLinker.onScoreDataChanged.Invoke();
+        }
+
+        public void ResetCurrentWorldLevelCount()
+        {
+            currentWorldLevelCount = 0;
             eventsLinker.onScoreDataChanged.Invoke();
         }
 
@@ -62,6 +91,8 @@ namespace CRWD
             phaseBweepsLimit = 0;
             currentLevelPhaseCount = 0;
             currentLevelPhaseMax = 0;
+            currentWorldLevelCount = 0;
+            currentWorldLevelMax = 0;
             eventsLinker.onScoreDataChanged.Invoke();
         }
     }

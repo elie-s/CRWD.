@@ -20,12 +20,12 @@ namespace CRWD.World
 
             for (int i = 0; i < halfAmount; i++)
             {
-                SetElement((float)i / (float)halfAmount, RandomPosition(settings.centerRect));
+                SetElement((float)i / (float)halfAmount, RandomPosition(settings.centerRect.rect));
             }
 
             for (int i = 0; i < halfAmount; i++)
             {
-                SetElement((float)i / (float)halfAmount, RandomPosition(settings.largeRect));
+                SetElement((float)i / (float)halfAmount, RandomPosition(settings.largeRect.rect));
             }
         }
 
