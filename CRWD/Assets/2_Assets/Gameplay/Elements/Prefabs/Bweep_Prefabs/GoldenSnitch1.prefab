@@ -300,8 +300,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  durationRef: 0.5
-  maxDistance: 2
+  durationRef: 1.75
+  maxDistance: 2.5
+  fleeDistance: 2
+  fleeCooldown: 1
 --- !u!58 &2422567638418123893
 CircleCollider2D:
   m_ObjectHideFlags: 0

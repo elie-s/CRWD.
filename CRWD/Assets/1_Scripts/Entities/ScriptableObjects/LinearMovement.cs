@@ -13,8 +13,17 @@ namespace CRWD
         [SerializeField] private Vector2 direction = default;
         [SerializeField] private float range = 1.0f;
 
+        //Private
+        bool startedMoving = false;
+
         public override IEnumerator MovementRoutine(Transform _transform, Vector2 _origin)
         {
+            if(!startedMoving)
+            {
+                yield return new WaitForSeconds(delay);
+                startedMoving = true;
+            }
+
             Vector2 startPos = _origin;
             Vector2 endPos = _origin + direction.normalized * range;
             float timer = 0.0f;
