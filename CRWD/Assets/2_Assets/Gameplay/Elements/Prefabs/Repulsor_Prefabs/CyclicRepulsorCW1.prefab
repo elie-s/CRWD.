@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7410419191880190806}
   - component: {fileID: 1635289469713255007}
   m_Layer: 8
-  m_Name: StaticRepulsor1
+  m_Name: CyclicRepulsorCW1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -251,33 +251,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sRenderer: {fileID: 5522247183714147499}
-  animations:
-  - {fileID: 11400000, guid: f5d87c461b970314db849a7f268ccbcd, type: 2}
+  animations: []
   onAllAnimationsEnd:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5522247184731156365}
-        m_MethodName: DestroyObject
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 3df5a177f559e6442812dbf04225b1b8, type: 2}
-        m_MethodName: CollectBweep
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &5522247184731156361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playOnAwake: 0
   repulse: {fileID: 0}
-  settings: {fileID: 11400000, guid: 63d4063ffe64f9143be7d14e722f7dcf, type: 2}
+  settings: {fileID: 11400000, guid: 831b3475e1bc43843a05ec96a6686f0b, type: 2}
 --- !u!50 &1960160803675572091
 Rigidbody2D:
   serializedVersion: 4
