@@ -23,6 +23,8 @@ namespace CRWD
             Vector2 destination = transform.position;
             float timer = 0.0f;
 
+            Transform movDest = default;
+
             if(direction == Direction.From)
             {
                 switch (mode)
@@ -43,7 +45,7 @@ namespace CRWD
                 switch (mode)
                 {
                     case Mode.FindName:
-                        destination = GameObject.Find(nameToFind).transform.position;
+                        movDest = GameObject.Find(nameToFind).transform;
                         break;
                     case Mode.RandomPosition:
                         destination = RandomInsideRect();
@@ -56,7 +58,7 @@ namespace CRWD
 
             while (timer < duration)
             {
-                transform.position = Vector2.Lerp(origin, destination, movementCurve.Evaluate(timer / duration));
+                transform.position = Vector2.Lerp(origin, direction == Direction.To && mode == Mode.FindName? (Vector2)movDest.position : destination, movementCurve.Evaluate(timer / duration));
 
                 yield return null;
                 timer += Time.deltaTime;

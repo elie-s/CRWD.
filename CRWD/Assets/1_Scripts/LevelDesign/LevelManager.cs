@@ -16,8 +16,8 @@ namespace CRWD
 
         private void Start()
         {
-            StartWorld();
-            StartLevel();
+            //StartWorld();
+            //StartLevel();
         }
 
         public void StartWorld()

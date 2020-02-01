@@ -14,15 +14,17 @@ namespace CRWD.Captation
 
         private bool nullDetection = false;
 
-        private void Awake()
+        private void OnEnable()
         {
-            data.Init(settings);
-            if (isPlayScene) settings.SetTestingValues(true, true, false);
+            
         }
 
         // Start is called before the first frame update
         void Start()
         {
+            data.Init(settings);
+            if (isPlayScene) settings.SetTestingValues(true, true, false);
+
             StartCoroutine(UpdateTextureRoutine());
         }
 
@@ -96,6 +98,11 @@ namespace CRWD.Captation
             }
 
             return result;
+        }
+
+        private void OnApplicationQuit()
+        {
+            data.camSet = false;
         }
     }
 }

@@ -14,6 +14,7 @@ namespace CRWD.Captation
         public int capted;
         public float ratio;
         public bool nullDetection;
+        public bool camSet;
 
         private List<System.Action> onCaptationUpdate;
 
@@ -26,8 +27,11 @@ namespace CRWD.Captation
 
         public void SetWebcam(int _index)
         {
+            if (camSet) webcam.Stop();
+
             webcam = new WebCamTexture(WebCamTexture.devices[_index].name);
             webcam.Play();
+            camSet = true;
         }
 
         public void OnCaptationUpdateRegister(System.Action _action)
