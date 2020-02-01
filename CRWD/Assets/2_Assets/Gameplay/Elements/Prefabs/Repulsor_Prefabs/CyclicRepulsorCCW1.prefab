@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7410419191880190806}
   - component: {fileID: 1635289469713255007}
   m_Layer: 8
-  m_Name: VerticalRepulsor1
+  m_Name: CyclicRepulsorCCW1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playOnAwake: 0
   repulse: {fileID: 0}
-  settings: {fileID: 11400000, guid: 63d4063ffe64f9143be7d14e722f7dcf, type: 2}
+  settings: {fileID: 11400000, guid: 8d3e14ee4fbff004f9676bae27277cdc, type: 2}
 --- !u!50 &1960160803675572091
 Rigidbody2D:
   serializedVersion: 4

@@ -9,32 +9,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2de20a8628776de478217278f144c16a, type: 3}
-  m_Name: PopSizeRepulsor
+  m_Script: {fileID: 11500000, guid: aa2e51be3eaabca498db43fd0e06d04a, type: 3}
+  m_Name: HorizontalMvtRoutineDelay2
   m_EditorClassIdentifier: 
-  duration: 1
-  endScale: 0.3
-  scaleCurve:
+  curve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0.005200606
-      outSlope: 0.005200606
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
-      weightedMode: 3
+      weightedMode: 0
       inWeight: 0
-      outWeight: 0.5643534
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0.016504584
-      outSlope: 0.016504584
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.08192098
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  duration: 2.5
+  delay: 0.6
+  direction: {x: 1, y: 0}
+  range: 4

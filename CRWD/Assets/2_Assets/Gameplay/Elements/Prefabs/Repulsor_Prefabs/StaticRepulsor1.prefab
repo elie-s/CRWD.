@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5522247183714147497}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5522247184731156366}
   m_RootOrder: 0
@@ -174,8 +174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseForce: 10
-  feedbackDuration: 0.3
-  feedbackScaleMultiplier: 0.5
+  feedbackDuration: 0.5
+  feedbackScaleMultiplier: 0.8
   feedbackCurve:
     serializedVersion: 2
     m_Curve:
@@ -338,7 +338,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3eb34a70c4a8a2d4eb31cf3f7817fb33, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.4
   m_Pitch: 1
