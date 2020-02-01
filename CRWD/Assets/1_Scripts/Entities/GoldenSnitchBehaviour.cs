@@ -11,6 +11,8 @@ namespace CRWD
         [SerializeField] private AnimationCurve celerityCurve = default;
         [SerializeField] private float durationRef = 1.0f;
         [SerializeField] private float maxDistance = 1.5f;
+        [SerializeField] private float fleeDistance = 2.0f;
+        [SerializeField] private float fleeCooldown = 0.5f;
 
         private Vector2 waypoint;
         private bool canFlee = true;
@@ -58,7 +60,7 @@ namespace CRWD
         {
             canFlee = false;
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(fleeCooldown);
 
             canFlee = true;
         }
@@ -76,7 +78,7 @@ namespace CRWD
             {
                 transform.position = Vector2.Lerp(origin, waypoint, celerityCurve.Evaluate(timer / duration));
 
-                if (canFlee && Vector2.Distance(transform.position, player.position) < maxDistance * 2.5f)
+                if (canFlee && Vector2.Distance(transform.position, player.position) < fleeDistance)
                 {
                     StartCoroutine(FleeRoutine());
                     goto jump;
