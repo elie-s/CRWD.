@@ -12,6 +12,11 @@ namespace CRWD
 
         private IEnumerator repulsion;
 
+        private void OnEnable()
+        {
+            repulsion = settings.repulsion.RepulsionRoutine(transform, Vector2.zero, 0.0f);
+        }
+
         void Update()
         {
             Move();

@@ -134,7 +134,7 @@ MonoBehaviour:
   sRenderer: {fileID: 5522247183714147499}
   animations:
   - {fileID: 11400000, guid: 2ed98ed293874464dbc9aa44a318106c, type: 2}
-  - {fileID: 11400000, guid: 1b1bb7e9f5fc60c4f8db7cd49bf52bf4, type: 2}
+  - {fileID: 11400000, guid: c71cdf87f919ff54089f80517721ea10, type: 2}
   - {fileID: 11400000, guid: 6f8927b40b4fe1f4dbd6381dbb1086d1, type: 2}
   onAllAnimationsEnd:
     m_PersistentCalls:
@@ -142,6 +142,17 @@ MonoBehaviour:
       - m_Target: {fileID: 7410419191880190806}
         m_MethodName: set_enabled
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: -4731850864303969778}
+        m_MethodName: SetBaseScale
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -162,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20adeec1aa016d54d8845a3f15307d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseForce: 5
+  baseForce: 10
   feedbackDuration: 0.3
   feedbackScaleMultiplier: 0.5
   feedbackCurve:

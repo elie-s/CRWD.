@@ -21,7 +21,18 @@ namespace CRWD
         private void Start()
         {
             sRenderer.color = feedbackColor.Evaluate(0);
+        }
+
+        public void SetBaseScale()
+        {
             baseScale = transform.localScale;
+        }
+
+        [ContextMenu("Repulsion")]
+        private void RepulsionTest()
+        {
+            StartCoroutine(FeedbackRoutine());
+            sfx.Play();
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
