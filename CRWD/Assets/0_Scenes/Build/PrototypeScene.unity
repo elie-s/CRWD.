@@ -204,7 +204,7 @@ PrefabInstance:
     - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
         type: 3}
       propertyPath: onCaptationUpdate.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
         type: 3}
@@ -234,6 +234,31 @@ PrefabInstance:
     - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
         type: 3}
       propertyPath: onCaptationUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
+        type: 3}
+      propertyPath: onCaptationUpdate.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
+        type: 3}
+      propertyPath: onCaptationUpdate.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
+        type: 3}
+      propertyPath: onCaptationUpdate.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 483026118}
+    - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
+        type: 3}
+      propertyPath: onCaptationUpdate.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnCaptationUpdate
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
+        type: 3}
+      propertyPath: onCaptationUpdate.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8347735064816348663, guid: 7268d476aee9d564eb01154a297ecd18,
@@ -436,7 +461,7 @@ Transform:
   m_GameObject: {fileID: 483026114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 6.5, y: 6.5, z: 6.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3

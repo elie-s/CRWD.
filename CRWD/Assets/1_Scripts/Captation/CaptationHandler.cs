@@ -37,7 +37,7 @@ namespace CRWD.Captation
         private IEnumerator UpdateTextureRoutine()
         {
             UpdateTexture();
-            data.OnCaptationUpdateCall();
+            //data.OnCaptationUpdateCall();
             if(!nullDetection) onCaptationUpdate.Invoke();
 
             yield return new WaitForSeconds((1.0f / settings.rate));

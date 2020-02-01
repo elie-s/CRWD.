@@ -64,7 +64,7 @@ namespace CRWD
                 timer += Time.deltaTime;
             }
 
-            transform.position = destination;
+            transform.position = direction == Direction.To && mode == Mode.FindName ? (Vector2)movDest.position : destination;
         }
 
         private Vector2 RandomInsideRect()

@@ -237,6 +237,7 @@ MonoBehaviour:
   sRenderer: {fileID: 3783712950263477083}
   animations:
   - {fileID: 11400000, guid: f5d87c461b970314db849a7f268ccbcd, type: 2}
+  - {fileID: 11400000, guid: d6a3c549462524b43a1b8b60c14757e2, type: 2}
   onAllAnimationsEnd:
     m_PersistentCalls:
       m_Calls:

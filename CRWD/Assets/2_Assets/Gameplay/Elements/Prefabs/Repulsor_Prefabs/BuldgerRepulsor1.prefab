@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3939763869554749677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 3939763869581336683}
   - {fileID: 2523562333939444331}
@@ -50,7 +50,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sRenderer: {fileID: 3939763869581336684}
-  animations: []
+  animations:
+  - {fileID: 11400000, guid: 25ade08f0436ea845bcd2b23d5c21f0e, type: 2}
   onAllAnimationsEnd:
     m_PersistentCalls:
       m_Calls:

@@ -16,11 +16,11 @@ namespace CRWD.Captation
         public bool nullDetection;
         public bool camSet;
 
-        private List<System.Action> onCaptationUpdate;
+        //private List<System.Action> onCaptationUpdate;
 
         public void Init(CaptationSettings _settings)
         {
-            onCaptationUpdate = new List<System.Action>();
+            //onCaptationUpdate = new List<System.Action>();
             texture = new Texture2D((int)_settings.rectangle.width, (int)_settings.rectangle.height);
             SetWebcam(_settings.webcamIndex);
         }
@@ -34,23 +34,18 @@ namespace CRWD.Captation
             camSet = true;
         }
 
-        public void OnCaptationUpdateRegister(System.Action _action)
-        {
-            onCaptationUpdate.Add(_action);
-        }
+        //public void OnCaptationUpdateUnregister(System.Action _action)
+        //{
+        //    onCaptationUpdate.Remove(_action);
+        //}
 
-        public void OnCaptationUpdateUnregister(System.Action _action)
-        {
-            onCaptationUpdate.Remove(_action);
-        }
-
-        public void OnCaptationUpdateCall()
-        {
-            foreach (System.Action action in onCaptationUpdate)
-            {
-                action();
-            }
-        }
+        //public void OnCaptationUpdateCall()
+        //{
+        //    foreach (System.Action action in onCaptationUpdate)
+        //    {
+        //        action();
+        //    }
+        //}
 
         public void SetSprite()
         {

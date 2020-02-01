@@ -67,7 +67,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  chargedScaleFactor: 0.25
+  chargedScaleFactor: 0.5
   celerityCurve:
     serializedVersion: 2
     m_Curve:
