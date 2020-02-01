@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 
 namespace CRWD.Captation
 {
     public class CaptationHandler : MonoBehaviour
     {
+        [SerializeField] private bool isPlayScene = false;
         [SerializeField] private CaptationData data = default;
+        [SerializeField] private UnityEvent onCaptationUpdate = default;
         [SerializeField, DrawScriptable] private CaptationSettings settings = default;
 
         private bool nullDetection = false;
@@ -15,6 +17,7 @@ namespace CRWD.Captation
         private void Awake()
         {
             data.Init(settings);
+            if (isPlayScene) settings.SetTestingValues(true, true, false);
         }
 
         // Start is called before the first frame update
@@ -33,6 +36,7 @@ namespace CRWD.Captation
         {
             UpdateTexture();
             data.OnCaptationUpdateCall();
+            if(!nullDetection) onCaptationUpdate.Invoke();
 
             yield return new WaitForSeconds((1.0f / settings.rate));
 

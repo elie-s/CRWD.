@@ -20,5 +20,5 @@ MonoBehaviour:
     width: 100
     height: 100
   textureSize: 32
-  ceil: 0.268
+  ceil: 0.08
   rate: 10

@@ -201,6 +201,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
+        type: 3}
+      propertyPath: onCaptationUpdate.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
+        type: 3}
+      propertyPath: isPlayScene
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
+        type: 3}
+      propertyPath: onCaptationUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
+        type: 3}
+      propertyPath: onCaptationUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
+        type: 3}
+      propertyPath: onCaptationUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483026120}
+    - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
+        type: 3}
+      propertyPath: onCaptationUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347735064816348662, guid: 7268d476aee9d564eb01154a297ecd18,
+        type: 3}
+      propertyPath: onCaptationUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8347735064816348663, guid: 7268d476aee9d564eb01154a297ecd18,
         type: 3}
       propertyPath: m_Name
@@ -304,6 +339,7 @@ GameObject:
   - component: {fileID: 483026116}
   - component: {fileID: 483026118}
   - component: {fileID: 483026115}
+  - component: {fileID: 483026122}
   - component: {fileID: 483026121}
   - component: {fileID: 483026120}
   - component: {fileID: 483026119}
@@ -326,6 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b4fac1ef69ea4418317b8a39a39c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sRenderer: {fileID: 483026116}
   data: {fileID: 11400000, guid: 86b7acb06195d3e4c8c4037428a62a5f, type: 2}
   settings: {fileID: 11400000, guid: 095cedb7868c4d2488eecd88c55d646e, type: 2}
 --- !u!212 &483026116
@@ -443,7 +480,7 @@ MonoBehaviour:
   DistanceThreshold: 0
   Scale: 1.05
   Decompose: 0
-  RunInPlayMode: 1
+  RunInPlayMode: 0
   UseCache: 1
   lastAlphaTolerance: 20
   lastScale: 1.05
@@ -489,6 +526,20 @@ PolygonCollider2D:
     - - {x: 0, y: 1}
       - {x: -0.95105654, y: 0.30901697}
       - {x: -0.5877852, y: -0.80901706}
+--- !u!114 &483026122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483026114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e749da2ed1414e43babfd2874aba39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  captationSettings: {fileID: 11400000, guid: 9d64dc7e5eecede40b37cd0b5f224a12, type: 2}
+  speed: 40
 --- !u!1 &686034571
 GameObject:
   m_ObjectHideFlags: 0
