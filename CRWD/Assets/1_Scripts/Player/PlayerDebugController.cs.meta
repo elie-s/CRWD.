@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 4e749da2ed1414e43babfd2874aba39f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - captationSettings: {fileID: 11400000, guid: 9d64dc7e5eecede40b37cd0b5f224a12,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

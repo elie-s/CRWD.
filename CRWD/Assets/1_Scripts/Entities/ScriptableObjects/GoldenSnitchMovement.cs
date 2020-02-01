@@ -55,7 +55,7 @@ namespace CRWD
             {
                 _transform.position = Vector2.Lerp(origin, waypoint, celerityCurve.Evaluate(timer / duration));
 
-                if (canFlee && Vector2.Distance(_transform.position, _player.position) < maxDistance)
+                if (canFlee && Vector2.Distance(_transform.position, _player.position) < maxDistance*2)
                 {
                     _movementBehaviour.StartCoroutine(FleeRoutine());
                     goto jump;
@@ -72,7 +72,7 @@ namespace CRWD
         jump:
             _movementBehaviour.StartCoroutine(Move(_movementBehaviour, _transform, _player));
 
-             IEnumerator FleeRoutine()
+            IEnumerator FleeRoutine()
             {
                 canFlee = false;
 

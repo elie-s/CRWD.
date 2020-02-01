@@ -337,6 +337,15 @@ namespace DigitalRuby.AdvancedPolygonCollider
             }
         }
 
+        public void UpdateCollider()
+        {
+            UpdateDirtyState();
+            if (dirty)
+            {
+                RecalculatePolygon();
+            }
+        }
+
 #if UNITY_EDITOR
 
         private void OnDrawGizmos()

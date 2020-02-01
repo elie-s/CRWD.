@@ -14,7 +14,6 @@ namespace CRWD
         private void Awake()
         {
             score.ResetData();
-            score.SetPhaseBweepsLimit(2);
         }
 
         public void UpdateScoreDisplayed()
