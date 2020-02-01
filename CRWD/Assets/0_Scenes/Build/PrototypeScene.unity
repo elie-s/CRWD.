@@ -248,6 +248,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7268d476aee9d564eb01154a297ecd18, type: 3}
+--- !u!114 &99637169 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 99637169, guid: f687b9bacb37f934cafc39fb11431fc9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1355022066144376563}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38356e5c260048e48a85dac9c985f4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &161970246
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +848,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 99637169}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPhaseStart:
     m_PersistentCalls:
       m_Calls: []
@@ -884,6 +907,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1984944766}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onRepulsorContact:
     m_PersistentCalls:
       m_Calls: []
@@ -909,6 +943,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2073654571}
         m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1717822833}
+        m_MethodName: ChangeLevelTheme
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1176,6 +1221,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1717822831}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1717822833 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1717822840, guid: eed4c235fcaa75741966337769dbef87,
+    type: 3}
+  m_PrefabInstance: {fileID: 1717822831}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14853779751237b42885bd43e0c94615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1832912880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,6 +1266,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1984944766 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1984944766, guid: f687b9bacb37f934cafc39fb11431fc9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1355022066144376563}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2013812201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,6 +1366,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2013812202}
     m_Modifications:
+    - target: {fileID: 950536984, guid: f687b9bacb37f934cafc39fb11431fc9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1617643792836418758, guid: f687b9bacb37f934cafc39fb11431fc9,
         type: 3}
       propertyPath: m_LocalPosition.x

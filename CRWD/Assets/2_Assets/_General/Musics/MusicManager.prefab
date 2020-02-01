@@ -390,8 +390,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 550633263746730984}
+  - component: {fileID: 1717822840}
   m_Layer: 0
-  m_Name: MUSIC
+  m_Name: MusicManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -417,6 +418,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1717822840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5477080102801654289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14853779751237b42885bd43e0c94615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreData: {fileID: 11400000, guid: 3df5a177f559e6442812dbf04225b1b8, type: 2}
+  levelSettings: {fileID: 11400000, guid: 532b03c438c9cce449c6df5296ccde83, type: 2}
+  themeAudio: {fileID: 6289627663747164514}
+  phaseAudios:
+  - {fileID: 7538396813682712781}
+  - {fileID: 8766263895234780661}
+  - {fileID: 2954724946491611040}
+  transitionAudio: {fileID: 3251394965135488778}
+  additionalMelody: {fileID: 2596127993133452848}
 --- !u!1 &6368064062319233613
 GameObject:
   m_ObjectHideFlags: 0
