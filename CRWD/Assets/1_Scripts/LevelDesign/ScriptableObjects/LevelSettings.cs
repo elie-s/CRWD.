@@ -8,5 +8,9 @@ namespace CRWD
     public class LevelSettings : ScriptableObject
     {
         public float delay = 1.5f;
+        public Gradient uiFadeInGradient = default;
+        public Gradient uiFadeOutGradient = default;
+        public Gradient uiTextsFadeInGradient = default;
+        public Gradient uiTextsFadeOutGradient = default;
     }
 }

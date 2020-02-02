@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
+using TMPro;
 
 namespace CRWD
 {
@@ -10,6 +12,9 @@ namespace CRWD
         [SerializeField] private EventsLinker eventsLinker = default;
         [SerializeField] private ScoreData score = default;
         [SerializeField] private PhaseManager[] levels = default;
+        [SerializeField] private TimerCount timer = default;
+        [SerializeField] private Image uiBg = default;
+        [SerializeField] private TextMeshProUGUI[] uiTexts = default;
         [SerializeField, DrawScriptable] private LevelSettings settings = default;
 
         PhaseManager currentLevel => levels[score.currentWorldLevelCount];
@@ -24,6 +29,7 @@ namespace CRWD
         {
             score.ResetData();
             score.SetCurrentWorldMax(levels.Length);
+            timer.Play();
         }
 
         public void StartLevel()
@@ -59,10 +65,36 @@ namespace CRWD
         private IEnumerator LevelTransitionRoutine()
         {
             eventsLinker.onLevelTransitionStart.Invoke();
+            timer.Stop();
 
-            yield return new WaitForSeconds(settings.delay);
+            Evaluation evaluation = new Evaluation(settings.delay/2);
+            
+            while (evaluation.isBelowOne)
+            {
+                uiBg.color = settings.uiFadeInGradient.Evaluate(evaluation.fraction);
+                foreach (var text in uiTexts)
+                {
+                    text.color = settings.uiTextsFadeInGradient.Evaluate(evaluation.fraction);
+                }
+
+                yield return evaluation.YieldIncrement();
+            }
+
+            evaluation = new Evaluation(settings.delay / 2);
+
+            while (evaluation.isBelowOne)
+            {
+                uiBg.color = settings.uiFadeOutGradient.Evaluate(evaluation.fraction);
+                foreach (var text in uiTexts)
+                {
+                    text.color = settings.uiTextsFadeOutGradient.Evaluate(evaluation.fraction);
+                }
+
+                yield return evaluation.YieldIncrement();
+            }
 
             eventsLinker.onLevelTransitionEnd.Invoke();
+            timer.Restart();
         }
     }
 }
