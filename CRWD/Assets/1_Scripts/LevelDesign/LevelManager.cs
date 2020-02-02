@@ -191,5 +191,10 @@ namespace CRWD
                 element.color = settings.uiTextsFadeOutGradient.Evaluate(1.0f);
             }
         }
+
+        public void UpdateLevelClearedDisplay()
+        {
+            uiTexts[0].text = "LEVEL " + (score.currentWorldLevelCount +1) + "/" + score.currentWorldLevelMax + " CLEARED!";
+        }
     }
 }
