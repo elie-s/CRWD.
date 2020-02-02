@@ -12,5 +12,7 @@ namespace CRWD
         public Gradient uiFadeOutGradient = default;
         public Gradient uiTextsFadeInGradient = default;
         public Gradient uiTextsFadeOutGradient = default;
+        public float mainUIFadeDuration = 1.0f;
+        public float cleanDelay = 2.0f;
     }
 }

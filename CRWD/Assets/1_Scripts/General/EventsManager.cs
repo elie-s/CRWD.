@@ -19,6 +19,8 @@ namespace CRWD
         [SerializeField] private UnityEvent onScoreDataChanged = default;
         [SerializeField] private UnityEvent onLevelTransitionStart = default;
         [SerializeField] private UnityEvent onLevelTransitionEnd = default;
+        [SerializeField] private UnityEvent onWorldStart = default;
+        [SerializeField] private UnityEvent onWorldEnd = default;
 
         private void Awake()
         {
@@ -32,7 +34,9 @@ namespace CRWD
                               onRepulsorContact,
                               onScoreDataChanged, 
                               onLevelTransitionStart,
-                              onLevelTransitionEnd);
+                              onLevelTransitionEnd,
+                              onWorldStart,
+                              onWorldEnd);
         }
     }
 }

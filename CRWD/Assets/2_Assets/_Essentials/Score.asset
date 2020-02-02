@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Score
   m_EditorClassIdentifier: 
   eventsLinker: {fileID: 11400000, guid: 75ac74c5bf8db564e8696adabad4a453, type: 2}
+  state: 0
+  lockScore: 0

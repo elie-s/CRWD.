@@ -149,17 +149,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5522247184731156361}
-        m_MethodName: StartRoutine
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 4507271870056691637}
         m_MethodName: set_enabled
         m_Mode: 6
@@ -220,7 +209,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  collected: 1
+  collected: 0
 --- !u!114 &5522247184731156365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f8c778d6f03a040ab7ee3f7bdb3a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playOnAwake: 0
+  playOnAwake: 1
   repulse: {fileID: 0}
   settings: {fileID: 11400000, guid: 8d3e14ee4fbff004f9676bae27277cdc, type: 2}
 --- !u!58 &4507271870056691637
@@ -283,7 +272,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5522247184731156402}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1

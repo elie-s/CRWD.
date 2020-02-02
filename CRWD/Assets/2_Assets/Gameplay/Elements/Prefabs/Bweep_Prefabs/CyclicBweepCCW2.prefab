@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4507271870056691637}
   - component: {fileID: -7199625149877206864}
   m_Layer: 8
-  m_Name: CyclicBweepCW1
+  m_Name: CyclicBweepCCW2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playOnAwake: 1
   repulse: {fileID: 0}
-  settings: {fileID: 11400000, guid: 831b3475e1bc43843a05ec96a6686f0b, type: 2}
+  settings: {fileID: 11400000, guid: 5991175ff3a6c3f41886382dba71398d, type: 2}
 --- !u!58 &4507271870056691637
 CircleCollider2D:
   m_ObjectHideFlags: 0

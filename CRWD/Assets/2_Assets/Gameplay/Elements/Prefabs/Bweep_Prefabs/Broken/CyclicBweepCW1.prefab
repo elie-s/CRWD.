@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: -8304529188941062419}
   - component: {fileID: -1001208479921949226}
   m_Layer: 8
-  m_Name: CyclicBweepCW2Large
+  m_Name: CyclicBweepCW1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,19 +138,9 @@ MonoBehaviour:
   onAllAnimationsEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5522247184731156364}
+      - m_Target: {fileID: 5522247184731156364, guid: 29977c15e3bd9864f86801a0af8f5ec5,
+          type: 3}
         m_MethodName: Activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5522247184731156361}
-        m_MethodName: StartRoutine
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -273,9 +263,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f8c778d6f03a040ab7ee3f7bdb3a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playOnAwake: 0
+  playOnAwake: 1
   repulse: {fileID: 0}
-  settings: {fileID: 11400000, guid: ff759f0cb5636844a9c19c4d71b9353d, type: 2}
+  settings: {fileID: 11400000, guid: 831b3475e1bc43843a05ec96a6686f0b, type: 2}
 --- !u!58 &-8304529188941062419
 CircleCollider2D:
   m_ObjectHideFlags: 0

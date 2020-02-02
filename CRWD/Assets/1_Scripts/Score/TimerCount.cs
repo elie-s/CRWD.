@@ -7,6 +7,7 @@ namespace CRWD
 {
     public class TimerCount : MonoBehaviour
     {
+        [SerializeField] private ScoreData score = default;
         [SerializeField] private TextMeshProUGUI display = default;
 
         [SerializeField] private float value = 0.0f;
@@ -39,8 +40,9 @@ namespace CRWD
         [ContextMenu("Reset")]
         public void Restart()
         {
-            minPassed = minutes;
-            secPassed = secondes;
+            //minPassed = minutes;
+            //secPassed = secondes;
+            value = 0.0f;
 
             StartCoroutine(timerRoutine);
         }
@@ -61,9 +63,14 @@ namespace CRWD
             }
         }
 
+        public void SetScore()
+        {
+            score.SetScore(Mathf.RoundToInt(value));
+        }
+
         public override string ToString()
         {
-            return ((minutes - minPassed) < 10 ? "0" + (minutes - minPassed).ToString() : (minutes - minPassed).ToString()) + ":" + ((secondes - secPassed) < 10 ? "0" + (secondes - secPassed).ToString() : (secondes - secPassed).ToString());
+            return ((minutes) < 10 ? "0" + (minutes).ToString() : (minutes).ToString()) + ":" + ((secondes) < 10 ? "0" + (secondes).ToString() : (secondes).ToString());
         }
     }
 }

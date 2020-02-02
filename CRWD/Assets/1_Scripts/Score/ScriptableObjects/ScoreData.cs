@@ -16,6 +16,16 @@ namespace CRWD
         public int currentWorldLevelCount { get; private set; }
         public int currentWorldLevelMax { get; private set; }
 
+        public int scorePhase { get; private set; }
+        public int scoreTotal { get; private set; }
+        public int repulsorsHit { get; private set; }
+
+        public State state;
+        public bool lockScore;
+
+        private int currentPhaseBweeps = 0;
+
+
         public void CollectBweep()
         {
             bweepsCount++;
@@ -31,21 +41,30 @@ namespace CRWD
 
                     if(currentWorldLevelCount == currentWorldLevelMax-1)
                     {
-                        //
+                        Debug.Log("end world");
+                        eventsLinker.onWorldEnd.Invoke();
                     }
                 }
             }
         }
 
-        public void SetPhaseBweepsLimit(int _limit)
+        public void SetScore(int _seconds)
         {
-            phaseBweepsLimit = _limit;
-            eventsLinker.onScoreDataChanged.Invoke();
+            if (lockScore) return;
+
+            int bweepsPoint = currentPhaseBweeps * 10 - repulsorsHit;
+            int reftime = currentPhaseBweeps * 10;
+
+            float timeModifier = (float)reftime / (float)_seconds * 2;
+
+            scorePhase = Mathf.RoundToInt(timeModifier * bweepsPoint) * 111;
+            scoreTotal += scorePhase;
         }
 
         public void AddPhaseBweepsLimit(int _limit)
         {
             phaseBweepsLimit += _limit;
+            currentPhaseBweeps += _limit;
             eventsLinker.onScoreDataChanged.Invoke();
         }
 
@@ -85,8 +104,25 @@ namespace CRWD
             eventsLinker.onScoreDataChanged.Invoke();
         }
 
+        public void ResetLevelScore()
+        {
+            currentPhaseBweeps = 0;
+            scorePhase = 0;
+            repulsorsHit = 0;
+        }
+
+        public void UnlockScore()
+        {
+            lockScore = false;
+        }
+
         public void ResetData()
         {
+            lockScore = false;
+            repulsorsHit = 0;
+            scorePhase = 0;
+            scoreTotal = 0;
+            currentPhaseBweeps = 0;
             bweepsCount = 0;
             phaseBweepsLimit = 0;
             currentLevelPhaseCount = 0;
@@ -95,5 +131,7 @@ namespace CRWD
             currentWorldLevelMax = 0;
             eventsLinker.onScoreDataChanged.Invoke();
         }
+
+        public enum State { Wait, InGame, Score}
     }
 }

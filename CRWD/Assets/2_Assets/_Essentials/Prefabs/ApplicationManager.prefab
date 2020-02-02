@@ -47,3 +47,4 @@ MonoBehaviour:
   changeSceneKey: 13
   levelManager: {fileID: 0}
   startGameKey: 32
+  score: {fileID: 11400000, guid: 3df5a177f559e6442812dbf04225b1b8, type: 2}

@@ -15,6 +15,8 @@ namespace CRWD
         [SerializeField] private TimerCount timer = default;
         [SerializeField] private Image uiBg = default;
         [SerializeField] private TextMeshProUGUI[] uiTexts = default;
+        [SerializeField] private TextMeshProUGUI[] mainUI = default;
+        [SerializeField] private Image uiBweep = default;
         [SerializeField, DrawScriptable] private LevelSettings settings = default;
 
         PhaseManager currentLevel => levels[score.currentWorldLevelCount];
@@ -25,11 +27,18 @@ namespace CRWD
             //StartLevel();
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.N)) ForceEndPhase();
+        }
+
         public void StartWorld()
         {
+            eventsLinker.onWorldStart.Invoke();
             score.ResetData();
             score.SetCurrentWorldMax(levels.Length);
             timer.Play();
+            score.state = ScoreData.State.InGame;
         }
 
         public void StartLevel()
@@ -59,7 +68,18 @@ namespace CRWD
 
         public void LevelTransition()
         {
-            StartCoroutine(LevelTransitionRoutine());
+            if(score.currentWorldLevelCount < score.currentLevelPhaseMax-1) StartCoroutine(LevelTransitionRoutine());
+        }
+
+        public void ForceEndPhase()
+        {
+            score.lockScore = true;
+            CollectableBehaviour[] collectables = FindObjectsOfType<CollectableBehaviour>();
+
+            foreach (CollectableBehaviour collectable in collectables)
+            {
+                collectable.Collect();
+            }
         }
 
         private IEnumerator LevelTransitionRoutine()
@@ -93,8 +113,83 @@ namespace CRWD
                 yield return evaluation.YieldIncrement();
             }
 
+            uiBg.color = settings.uiFadeOutGradient.Evaluate(1.0f);
+            foreach (var text in uiTexts)
+            {
+                text.color = settings.uiTextsFadeOutGradient.Evaluate(1.0f);
+            }
+
             eventsLinker.onLevelTransitionEnd.Invoke();
             timer.Restart();
+        }
+        
+        public void CleanLevels()
+        {
+            StartCoroutine(CleanLevelsRoutine());
+        }
+
+        public IEnumerator CleanLevelsRoutine()
+        {
+            yield return new WaitForSeconds(settings.cleanDelay);
+
+            foreach (PhaseManager phaseManager in levels)
+            {
+                phaseManager.Clean();
+            }
+        }
+
+        public void FadeInUI()
+        {
+            StartCoroutine(FadeInUIRoutine());
+        }
+
+        private IEnumerator FadeInUIRoutine()
+        {
+            Evaluation evaluation = new Evaluation(settings.mainUIFadeDuration);
+
+            while (evaluation.isBelowOne)
+            {
+                uiBweep.color = settings.uiTextsFadeInGradient.Evaluate(evaluation.fraction);
+                foreach (TextMeshProUGUI element in mainUI)
+                {
+                    element.color = settings.uiTextsFadeInGradient.Evaluate(evaluation.fraction);
+                }
+
+                yield return evaluation.YieldIncrement();
+            }
+
+            uiBweep.color = settings.uiTextsFadeInGradient.Evaluate(1.0f);
+            foreach (TextMeshProUGUI element in mainUI)
+            {
+                element.color = settings.uiTextsFadeInGradient.Evaluate(1.0f);
+            }
+        }
+
+        public void FadeOutUI()
+        {
+            StartCoroutine(FadeOutUIRoutine());
+        }
+
+        private IEnumerator FadeOutUIRoutine()
+        {
+            Evaluation evaluation = new Evaluation(settings.mainUIFadeDuration);
+
+            while (evaluation.isBelowOne)
+            {
+                uiBweep.color = settings.uiTextsFadeOutGradient.Evaluate(evaluation.fraction);
+                foreach (TextMeshProUGUI element in mainUI)
+                {
+                    element.color = settings.uiTextsFadeOutGradient.Evaluate(evaluation.fraction);
+                }
+
+                yield return evaluation.YieldIncrement();
+            }
+
+            uiBweep.color = settings.uiTextsFadeOutGradient.Evaluate(1.0f);
+            foreach (TextMeshProUGUI element in mainUI)
+            {
+                element.color = settings.uiTextsFadeOutGradient.Evaluate(1.0f);
+            }
         }
     }
 }

@@ -94,10 +94,10 @@ GameObject:
   - component: {fileID: 5522247184731156364}
   - component: {fileID: 5522247184731156365}
   - component: {fileID: 5522247184731156361}
-  - component: {fileID: 4507271870056691637}
-  - component: {fileID: -7199625149877206864}
+  - component: {fileID: -1001208479921949226}
+  - component: {fileID: 995304108710471866}
   m_Layer: 8
-  m_Name: CyclicBweepCW1
+  m_Name: CyclicBweepCW2Large
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,7 @@ Transform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 5522247183714147496}
-  - {fileID: 8780258778088498042}
+  - {fileID: 5208241140979687426}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -138,7 +138,8 @@ MonoBehaviour:
   onAllAnimationsEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5522247184731156364}
+      - m_Target: {fileID: 5522247184731156364, guid: 29977c15e3bd9864f86801a0af8f5ec5,
+          type: 3}
         m_MethodName: Activate
         m_Mode: 1
         m_Arguments:
@@ -149,7 +150,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4507271870056691637}
+      - m_Target: {fileID: 995304108710471866}
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -187,7 +188,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4507271870056691637}
+      - m_Target: {fileID: 995304108710471866}
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -209,7 +210,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  collected: 0
+  collected: 1
 --- !u!114 &5522247184731156365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,24 +265,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playOnAwake: 1
   repulse: {fileID: 0}
-  settings: {fileID: 11400000, guid: 831b3475e1bc43843a05ec96a6686f0b, type: 2}
---- !u!58 &4507271870056691637
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5522247184731156402}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
---- !u!50 &-7199625149877206864
+  settings: {fileID: 11400000, guid: ff759f0cb5636844a9c19c4d71b9353d, type: 2}
+--- !u!50 &-1001208479921949226
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -302,7 +287,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1001 &7813774051671424473
+--- !u!58 &995304108710471866
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5522247184731156402}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!1001 &6768566600784756385
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -371,9 +372,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9d6b737a0dcc6342a9fcaf2e392c9d3, type: 3}
---- !u!4 &8780258778088498042 stripped
+--- !u!4 &5208241140979687426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1560959956687150755, guid: a9d6b737a0dcc6342a9fcaf2e392c9d3,
     type: 3}
-  m_PrefabInstance: {fileID: 7813774051671424473}
+  m_PrefabInstance: {fileID: 6768566600784756385}
   m_PrefabAsset: {fileID: 0}

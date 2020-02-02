@@ -11,16 +11,18 @@ namespace CRWD
         [SerializeField] private KeyCode changeSceneKey = KeyCode.Return;
         [SerializeField] private LevelManager levelManager = default;
         [SerializeField] private KeyCode startGameKey = KeyCode.Space;
+        [SerializeField] private ScoreData score = default;
 
         private void Update()
         {
             if (Input.GetKeyDown(changeSceneKey)) ChangeScene();
             else if (Input.GetKeyDown(KeyCode.Escape)) Quit();
-            else if (Input.GetKeyDown(startGameKey)) StartGame();
+            else if (Input.GetKeyDown(startGameKey) && score.state == ScoreData.State.Wait) StartGame();
         }
 
         private void ChangeScene()
         {
+            score.state = ScoreData.State.Wait;
             SceneManager.LoadSceneAsync(otherScene);
         }
 
@@ -33,6 +35,7 @@ namespace CRWD
         {
             if (!levelManager) return;
 
+            score.state = ScoreData.State.InGame;
             levelManager.StartWorld();
             levelManager.StartLevel();
         }

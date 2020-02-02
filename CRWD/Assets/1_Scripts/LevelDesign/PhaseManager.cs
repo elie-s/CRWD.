@@ -11,6 +11,8 @@ namespace CRWD
         [SerializeField] private GameObject[] phases = default;
         [SerializeField, DrawScriptable] private PhaseSettings settings = default;
 
+        private List<GameObject> instantiatedPhases = new List<GameObject>();
+
         public IEnumerator PhaseTransitionRoutine()
         {
             eventsLinker.onPhaseTransitionStart.Invoke();
@@ -25,6 +27,7 @@ namespace CRWD
             if (score.currentLevelPhaseCount >= phases.Length) return;
 
             GameObject phase = Instantiate(phases[score.currentLevelPhaseCount], transform);
+            instantiatedPhases.Add(phase);
             score.AddPhaseBweepsLimit(phase.GetComponentsInChildren<CollectableBehaviour>().Length);
             Debug.Log("count: " + phase.GetComponentsInChildren<CollectableBehaviour>().Length+" - "+score.phaseBweepsLimit);
             eventsLinker.onPhaseStart.Invoke();
@@ -33,6 +36,16 @@ namespace CRWD
         public void SetPhasesLimit()
         {
             score.SetCurrentLevelPhaseMax(phases.Length);
+        }
+
+        public void Clean()
+        {
+            for (int i = 0; i < instantiatedPhases.Count; i++)
+            {
+                Destroy(instantiatedPhases[i]);
+            }
+
+            instantiatedPhases = new List<GameObject>();
         }
     }
 }

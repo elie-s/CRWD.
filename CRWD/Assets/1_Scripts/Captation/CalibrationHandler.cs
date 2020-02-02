@@ -17,6 +17,7 @@ namespace CRWD.Captation
         [SerializeField] private CaptationData data = default;
         [SerializeField] private Slider pixelization = default;
         [SerializeField] private Slider ceilSlider = default;
+        [SerializeField] private Slider webcamIndex = default;
         [SerializeField, DrawScriptable] private CaptationSettings settings = default;
 
         void Update()
@@ -33,11 +34,25 @@ namespace CRWD.Captation
         {
             wholeWebcam.rectTransform.sizeDelta = new Vector2(data.webcam.width, data.webcam.height);
             wholeWebcam.rectTransform.anchoredPosition = new Vector2(-data.webcam.width * 0.5f, -data.webcam.height * 0.5f);
-            wholeWebcam.texture = data.webcam;
+
+            if (data.camFail)
+            {
+                wholeWebcam.texture = new Texture2D(data.webcam.width, data.webcam.height);
+            }
+            else
+            {
+                wholeWebcam.texture = data.webcam;
+            }
 
             captationRect.sizeDelta = new Vector2(settings.rectangle.width, settings.rectangle.height);
             captationRect.anchoredPosition = new Vector2(-settings.rectangle.width * 0.5f + settings.rectangle.x, -settings.rectangle.height * 0.5f + settings.rectangle.y);
             captationArea.texture = data.texture;
+        }
+
+        public void UpdateWebcamDevice()
+        {
+            settings.webcamIndex = (int)webcamIndex.value;
+            data.SetWebcam(settings.webcamIndex);
         }
 
         public void Resize()
