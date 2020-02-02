@@ -7,6 +7,8 @@ namespace CRWD
     [CreateAssetMenu(menuName = "CRWD/Player/Settings")]
     public class PlayerSettings : ScriptableObject
     {
+        public AnimationCurve ratioSize = default;
+        public float sizeMax = 15.0f;
         [Header("Movement")]
         public RectObject clampedArea;
         public AnimationCurve ratioSizeSpeedCurve;
@@ -14,6 +16,7 @@ namespace CRWD
         public float speed;
         [Header("Repulsion")]
         [DrawScriptable] public RepulsionSettings repulsion;
+        
         
     }
 }

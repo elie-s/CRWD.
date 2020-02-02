@@ -15,6 +15,7 @@ namespace CRWD.Captation
         public float ratio;
         public bool nullDetection;
         public bool camSet;
+        public bool camFail;
 
         //private List<System.Action> onCaptationUpdate;
 
@@ -27,11 +28,20 @@ namespace CRWD.Captation
 
         public void SetWebcam(int _index)
         {
+            if (_index >= WebCamTexture.devices.Length)
+            {
+                Debug.Log("Webcam out of range.");
+                webcam.Stop();
+                camFail = true;
+                return;
+            }
+
             if (camSet) webcam.Stop();
 
             webcam = new WebCamTexture(WebCamTexture.devices[_index].name);
             webcam.Play();
             camSet = true;
+            camFail = false;
         }
 
         //public void OnCaptationUpdateUnregister(System.Action _action)

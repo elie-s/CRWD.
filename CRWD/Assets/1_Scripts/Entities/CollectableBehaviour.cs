@@ -22,7 +22,7 @@ namespace CRWD
         }
 
         [ContextMenu("Collect")]
-        private void Collect()
+        public void Collect()
         {
             onCollected.Invoke();
             collected = true;

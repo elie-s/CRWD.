@@ -15,10 +15,10 @@ MonoBehaviour:
   webcamIndex: 1
   rectangle:
     serializedVersion: 2
-    x: 0
+    x: 14.802076
     y: 0
-    width: 100
-    height: 100
+    width: 43.774548
+    height: 43.774548
   textureSize: 32
-  ceil: 0.184068
+  ceil: -0.06
   rate: 10

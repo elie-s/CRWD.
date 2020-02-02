@@ -19,6 +19,8 @@ namespace CRWD
         public UnityEvent onScoreDataChanged { get; private set; }
         public UnityEvent onLevelTransitionStart { get; private set; }
         public UnityEvent onLevelTransitionEnd { get; private set; }
+        public UnityEvent onWorldStart { get; private set; }
+        public UnityEvent onWorldEnd { get; private set; }
 
         public void Link(params UnityEvent[] _events)
         {
@@ -33,6 +35,8 @@ namespace CRWD
             onScoreDataChanged = _events[8];
             onLevelTransitionStart = _events[9];
             onLevelTransitionEnd = _events[10];
+            onWorldStart = _events[11];
+            onWorldEnd = _events[12];
         }
     }
 }

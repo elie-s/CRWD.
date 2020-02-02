@@ -138,7 +138,8 @@ MonoBehaviour:
   onAllAnimationsEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7410419191880190806}
+      - m_Target: {fileID: 7410419191880190806, guid: 5b387e892ded715438e45fd9746b6141,
+          type: 3}
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -149,19 +150,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: -4731850864303969778}
+      - m_Target: {fileID: -4731850864303969778, guid: 5b387e892ded715438e45fd9746b6141,
+          type: 3}
         m_MethodName: SetBaseScale
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 5522247184731156361}
-        m_MethodName: StartRoutine
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -288,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f8c778d6f03a040ab7ee3f7bdb3a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playOnAwake: 0
+  playOnAwake: 1
   repulse: {fileID: 0}
   settings: {fileID: 11400000, guid: 831b3475e1bc43843a05ec96a6686f0b, type: 2}
 --- !u!50 &1960160803675572091

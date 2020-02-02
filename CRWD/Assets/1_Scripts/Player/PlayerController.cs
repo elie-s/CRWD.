@@ -21,6 +21,12 @@ namespace CRWD
         {
             Move();
             ManageColor();
+            Scale();
+        }
+
+        private void Scale()
+        {
+            transform.localScale = Vector3.one * settings.ratioSize.Evaluate(data.ratio) * settings.sizeMax;
         }
 
         private void Move()
